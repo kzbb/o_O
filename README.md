@@ -1,2 +1,2 @@
 # (o_O)!?
-a blog skeleton.  laravel5.5  bootstrap4.0
+a blog skeleton made with laravel5.5 and bootstrap4.0
