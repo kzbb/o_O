@@ -27,7 +27,8 @@
                             </h1>
                             <p class="card-text">
                                 a blog skeleton<br>
-                                laravel5.5 | bootstrap4.0
+                                laravel5.5 | bootstrap4.0 |
+                                <a href="https://github.com/kzbb/o_O">source code(GitHub)</a>
                             </p>
                         </div>
                     </div>

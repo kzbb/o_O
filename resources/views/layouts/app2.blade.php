@@ -25,36 +25,49 @@
 
                     <ul class="nav">
                         <li class="nav-item align-self-end">
-                            <h1 class="mb-0 pb-0"><a class="nav-link pb-0"
+                            <h1 class="mb-0 pb-0">
+                                <a class="nav-link pb-0"
                                 @if( Request::path() == "/" )
                                 href="home"
                                 @else
                                 href="/"
                                 @endif
                                 >
-                                {{ config('app.name', '(o_O)!?') }}</a></h1>
+                                    {{ config('app.name', '(o_O)!?') }}
+                                </a>
+                            </h1>
                         </li>
                         @auth
                         @if( isset($_GET["view"]) )
                         <li class="nav-item align-self-end active">
-                            <a class="nav-link pb-0" href="home">Home</a>
+                            <a class="nav-link pb-0" href="home">
+                                Home
+                            </a>
                         </li>
                         @else
                         <li class="nav-item align-self-end">
-                            <a class="nav-link pb-0" href="home?view=future">Scheduled</a>
+                            <a class="nav-link pb-0" href="home?view=future">
+                                Scheduled
+                            </a>
                         </li>
                         @endif
                         @if( Request::path() == "settings" )
                         <li class="nav-item align-self-end">
-                            <a class="nav-link pb-0" href="home">Home</a>
+                            <a class="nav-link pb-0" href="home">
+                                Home
+                            </a>
                         </li>
                         @else
                         <li class="nav-item align-self-end">
-                            <a class="nav-link pb-0" href="settings">Settings</a>
+                            <a class="nav-link pb-0" href="settings">
+                                Settings
+                            </a>
                         </li>
                         @endif
                         <li class="nav-item align-self-end">
-                            <a class="nav-link pb-0" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                            <a class="nav-link pb-0" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}
@@ -64,6 +77,18 @@
                     </ul>
 
                 </div>
+
+                <div class="col align-self-end">
+                    <div class="card border-0">
+                        <div class="card-body px-3 pt-3">
+                            <form class="form-horizontal" style="min-width: 8rem;" action="searchpost" method="POST">
+                                {{ csrf_field() }}
+                                <input class="form-control" name="keyword" placeholder="Search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 

@@ -25,3 +25,5 @@ Route::post('/deletepost', 'PostController@deletePost');
 Route::get('/settings', 'SettingController@viewSettings');
 Route::post('/savesettings', 'SettingController@saveSettings');
 Route::post('/deleteuser', 'SettingController@deleteUser');
+
+Route::post('/searchpost', 'SearchController@searchPost');
