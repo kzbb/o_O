@@ -21,7 +21,7 @@
                     <div class="card border-0">
                         <div class="card-body px-3 py-3">
                             <h1 class="card-title">
-                                <a href="/">
+                                <a class="nav-link px-0 py-0" href="/">
                                     {{ config('app.name', '(o_O)!?') }}
                                 </a>
                             </h1>

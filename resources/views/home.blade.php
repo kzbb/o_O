@@ -60,16 +60,20 @@
                                     </a>
                                 </div>
                                 <div>
-                                    {!! nl2br(e(trans($post->content))) !!}
+                                    <?php
+                                        $pattern = '(https?://[-_.!~*\'()a-zA-Z0-9;/?:@&=+$,%#]+)';
+                                        $replacement = '<a href="\1" target="_blank">\1</a>';
+                                    ?>
+                                    {!! mb_ereg_replace($pattern, $replacement, nl2br(e(trans($post->content)))) !!}
                                 </div>
-                                @if(Auth::id() == $post->user_id)
-                                <div class="text-right">
+                                <div class="text-right" style="height: 2rem;">
+                                    @if(Auth::id() == $post->user_id)
                                     <form method="GET" action="posteditor">
                                         <input type="hidden" name="post_id" value="{{ $post->id }}">
                                         <button class="btn btn-outline-success btn-sm">Edit</button>
                                     </form>
+                                    @endif
                                 </div>
-                                @endif
                             </div>
                         </div>
                     </div>

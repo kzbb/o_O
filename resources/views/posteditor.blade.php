@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
             <div class="card my-2" style="box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);">
-                <div class="card-body px-2 py-2">
+                <div class="card-body px-3 py-2">
 
                     <form id="updatePost" method="POST" action="updatepost">
                         {{ csrf_field() }}
